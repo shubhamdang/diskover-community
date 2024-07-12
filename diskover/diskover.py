@@ -469,7 +469,8 @@ def get_tree_size(thread, root, top, path, docs, sizes, inodes, depth=0, maxdept
                                     'ctime': ctime,
                                     'nlink': f_stat.st_nlink,
                                     'ino': str(f_stat.st_ino),
-                                    'type': 'file'
+                                    'type': 'file',
+                                    '@timestamp': datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S.%fZ")
                                 }
 
                                 # check if using altscanner and if any additional meta data to add to data dict

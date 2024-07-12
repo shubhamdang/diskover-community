@@ -284,6 +284,9 @@ def create_index(indexname, es):
                 },
                 'type': {
                     'type': 'keyword'
+                },
+                '@timestamp': {
+                    'type': 'date'
                 }
             }
         }
